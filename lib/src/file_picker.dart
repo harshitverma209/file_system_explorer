@@ -24,7 +24,9 @@ class FilePickerDialog extends StatelessWidget {
       : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Container(
       height: 700,
       width: 500,
@@ -104,7 +106,7 @@ class FilePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return ChangeNotifierProvider<_CurrentFileSystemEntitiy>(
-      builder: (context) => __currentFileSystemEntitiy,
+      create: (context) => __currentFileSystemEntitiy,
       child: Container(
         color: theme.backgroundColor,
         padding: EdgeInsets.symmetric(
